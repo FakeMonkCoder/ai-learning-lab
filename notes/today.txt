@@ -1,4 +1,3 @@
-
 Today I learned Git basics.
 I created my first repository.
 I successfully pushed code to GitHub.
