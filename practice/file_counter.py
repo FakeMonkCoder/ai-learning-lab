@@ -1,19 +1,35 @@
 import os
 
-content = os.listdir("../notes")
 
-txtcount = 0
-jsoncount = 0
-mdcount = 0
+def count_files(folder_path):
 
-for co in content:
-    if co.endswith(".txt"):
+    files = os.listdir(folder_path)
+
+
+    txtcount = 0
+    jsoncount = 0
+    mdcount = 0
+
+    for co in files:
+      if co.endswith(".txt"):
         txtcount += 1
-        if co.endswith(".json"):
+      elif co.endswith(".json"):
             jsoncount += 1
-        else :
+      elif co.endswith(".md"):
             mdcount += 1
 
-print(".txt",txtcount)
-print(".json",jsoncount)
-print(".md",mdcount)
+    return [txtcount,jsoncount,mdcount]
+
+
+def print_result(result):
+
+    print(".txt:",result[0])
+    print(".json:",result[1])
+    print(".md:",result[2])
+
+
+
+folder_path = "../notes"
+
+print_result(count_files(folder_path))
+
