@@ -4,6 +4,7 @@ content = file.read()
 
 lines = content.splitlines()
 
+
 count = len(lines)
 
 
