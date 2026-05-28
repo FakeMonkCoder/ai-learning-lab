@@ -30,5 +30,10 @@ def print_result(result):
 
 folder_path = input("Enter fold path:")
 
-print_result(count_files(folder_path))
+if os.path.exists(folder_path):
+    print_result(count_files(folder_path))
+else:
+    print("Folder dose not exist")
+
+
 
