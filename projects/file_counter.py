@@ -28,7 +28,7 @@ def print_result(result):
 
 
 
-folder_path = "../notes"
+folder_path = input("Enter fold path:")
 
 print_result(count_files(folder_path))
 
